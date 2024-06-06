@@ -51,7 +51,7 @@ root = tk.Tk()
 root.title("자세 측정 프로그램")
 
 # 이미지 로드 및 표시
-image_path = "./finalPose/turtle_neck.png"  # 이미지 파일 경로 (실제 경로로 변경)
+image_path = "./OPEN_CV_PROJECT/turtle_neck.png"  # 이미지 파일 경로 (실제 경로로 변경)
 image = Image.open(image_path)
 image = image.resize((300, 200))  # 이미지 크기 조정 (선택 사항)
 photo = ImageTk.PhotoImage(image)
@@ -66,9 +66,17 @@ def start_measurement(selected_type):
     is_measuring = False
     root.destroy() 
 
+def end_program():
+    # 웹캠 및 OpenCV 창 해제
+    cap.release()
+    cv2.destroyAllWindows()
+    root.destroy()  # GUI 창 닫기
+
+
 # 버튼 생성
 ttk.Button(root, text="턱-명치 거리 측정", command=lambda: start_measurement('chin_to_sternum')).pack(pady=5)
 ttk.Button(root, text="얼굴 크기 변화 측정", command=lambda: start_measurement('face_size')).pack(pady=5)
+ttk.Button(root, text="닫기", command=lambda: end_program()).pack(pady=5)
 
 description = ttk.Label(root, text="측정 방식을 택한 뒤 7초 뒤에 측정이 시작됩니다.\n노트북위치와, 최대한 바른 자세를 초기에 잡아주세요!")
 description.pack()

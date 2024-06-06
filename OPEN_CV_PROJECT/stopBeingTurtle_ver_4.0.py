@@ -56,7 +56,7 @@ root = tk.Tk()
 root.title("자세 측정 프로그램")
 
 # 이미지 로드 및 표시
-image_path = "./finalPose/turtle_neck.png"  # 이미지 파일 경로 (실제 경로로 변경)
+image_path = "./OPEN_CV_PROJECT/turtle_neck.png"  # 이미지 파일 경로 (실제 경로로 변경)
 image = Image.open(image_path)
 image = image.resize((300, 200))  # 이미지 크기 조정 (선택 사항)
 photo = ImageTk.PhotoImage(image)
