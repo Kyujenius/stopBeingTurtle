@@ -5,7 +5,7 @@ import time
 import telebot
 
 #봇 설정
-token = '7366178157:AAG2MOVxAZXB2kB3l9r7uGCom5jP8DnR9dQ'  # 봇 토큰 (BotFather에서 받은 토큰으로 교체)
+token = '-:-'  # 봇 토큰 (BotFather에서 받은 토큰으로 교체)
 bot = telebot.TeleBot(token=token)
 user_id = 7287129421  # 사용자 ID (알림을 받을 사용자의 Telegram ID)
 
