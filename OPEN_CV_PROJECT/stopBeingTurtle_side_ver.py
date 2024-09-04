@@ -5,7 +5,7 @@ import time
 import telebot
 
 # 봇 설정
-token = '7366178157:AAG2MOVxAZXB2kB3l9r7uGCom5jP8DnR9dQ'
+token = '-:-'
 bot = telebot.TeleBot(token=token)
 user_id = 7287129421  # 예시 사용자 ID (홍규진 telegramId)
 
